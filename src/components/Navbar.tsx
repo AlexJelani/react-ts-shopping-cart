@@ -22,13 +22,13 @@ export function Navbar() {
             color="inherit"
             aria-label="menu"
           ></IconButton>
-          <Button color="inherit" Home={Link} to="/">
+         <Button component={Link} to="/" color="inherit">
             Home
           </Button>
-          <Button color="inherit" Store={Link} to="/store">
+          <Button component={Link} to="/store" color="inherit">
             Store
           </Button>
-          <Button color="inherit" About={Link} to="/about">
+          <Button component={Link} to="/about" color="inherit">
             About
           </Button>
           <Box ml="auto">
