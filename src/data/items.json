@@ -2,19 +2,19 @@
   {
     "id": 1,
     "name": "Iguana",
-    "price": 300.0,
+    "price": 300,
     "ImgUrl": "/imgs/comtemplative-reptile.jpg"
   },
   {
     "id": 1,
     "name": "Iguana",
-    "price": 300.0,
+    "price": 300,
     "ImgUrl": "/imgs/comtemplative-reptile.jpg"
   },
   {
     "id": 1,
     "name": "Iguana",
-    "price": 300.0,
+    "price": 300,
     "ImgUrl": "/imgs/comtemplative-reptile.jpg"
   }
 ]
