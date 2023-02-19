@@ -5,39 +5,46 @@ import {
   Typography,
   IconButton,
   Button,
+  Grid,
+  Badge
 } from "@mui/material";
-import StoreIcon from "@mui/icons-material/Store";
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { Link } from "react-router-dom";
-import { Home } from '../pages/Home';
-import { Store } from '../pages/Store';
-import { About } from '../pages/About';
 
 export function Navbar() {
   return (
-    <AppBar position="static">
-      <Toolbar>
-        <Box display="flex" alignItems="center">
-          <IconButton
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-          ></IconButton>
-         <Button component={Link} to="/" color="inherit">
-            Home
-          </Button>
-          <Button component={Link} to="/store" color="inherit">
-            Store
-          </Button>
-          <Button component={Link} to="/about" color="inherit">
-            About
-          </Button>
-          <Box ml="auto">
-            <IconButton color="inherit">
-              <StoreIcon />
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static">
+        <Toolbar>
+          <Grid container spacing={2} alignItems="center">
+            <Grid item>
+              <Button component={Link} to="/" color="inherit">
+                <Typography variant="h6" component="div">
+                  Home
+                </Typography>
+              </Button>
+            </Grid>
+            <Grid item>
+              <Button component={Link} to="/store" color="inherit">
+                Store
+              </Button>
+            </Grid>
+            <Grid item>
+              <Button component={Link} to="/about" color="inherit">
+                About
+              </Button>
+            </Grid>
+          </Grid>
+          <Box sx={{ flexGrow: 1 }} />
+          <Box>
+            <IconButton edge="end" color="inherit" aria-label="menu">
+            <Badge badgeContent={5} color="error">
+                <ShoppingCartIcon />
+              </Badge>
             </IconButton>
           </Box>
-        </Box>
-      </Toolbar>
-    </AppBar>
+        </Toolbar>
+      </AppBar>
+    </Box>
   );
 }
