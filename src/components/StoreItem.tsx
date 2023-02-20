@@ -3,6 +3,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
+import { formatCurrency } from "../utilities/formatCurrency";
 
 type StoreItemProps = {
   id: number;
@@ -34,7 +35,7 @@ export function StoreItem({
           </div>
           <div>
             <Typography variant="h5" color="textPrimary">
-              {price}
+              {formatCurrency(price)}
             </Typography>
           </div>
         </CardContent>
