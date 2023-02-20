@@ -25,23 +25,17 @@ export function StoreItem({
         <CardActionArea>
           <CardMedia component="img" height="140" image={imgUrl} alt={name} />
           <CardContent
-            sx={{ display: "flex", justifyContent: "space-between" }}
-          >
+            sx={{ display: "flex", justifyContent: "space-between" }}>
             <div>
               <Typography gutterBottom variant="h5" component="div">
                 {name}
               </Typography>
             </div>
             <div>
-              <Typography variant="body2" color="text.secondary">
+              <Typography variant="h5" color="text.secondary">
                 {price}
               </Typography>
             </div>
-            {/* <div>
-            <Typography variant="body2" color="text.secondary">
-              {description}
-            </Typography>
-            </div> */}
           </CardContent>
         </CardActionArea>
         <CardActions>
