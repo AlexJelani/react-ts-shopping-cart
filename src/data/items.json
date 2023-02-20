@@ -4,7 +4,7 @@
     "name": "Iguana",
     "price": 300,
     "imgUrl": "/imgs/iguana.jpg",
-    "description": "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica"
+    "description": "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents."
   },
   {
     "id": 2,
