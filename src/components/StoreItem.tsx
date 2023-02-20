@@ -19,7 +19,9 @@ export function StoreItem({
   price,
   imgUrl,
   description,
-}: StoreItemProps) {
+}: StoreItemProps)
+ { 
+  const quantity = 0;
   return (
     <Card sx={{ maxWidth: 345, display:"flex", height:"100%", flexDirection: "column"}}>
       <CardActionArea>
@@ -40,10 +42,10 @@ export function StoreItem({
           </div>
         </CardContent>
       </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
+      <CardActions style={{ display: 'flex', justifyContent: 'center' }}>
+        {quantity === 0 ?<Button size="small" color="primary" >
+          + Add to Cart
+        </Button>: null}
       </CardActions>
     </Card>
   );
