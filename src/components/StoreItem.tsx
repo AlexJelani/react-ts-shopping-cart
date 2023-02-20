@@ -21,7 +21,7 @@ export function StoreItem({
   description,
 }: StoreItemProps) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345, display:"flex", height:"100%", flexDirection: "column"}}>
       <CardActionArea>
         <CardMedia component="img" height="140" image={imgUrl} alt={name} />
         <CardContent sx={{ display: "flex", justifyContent: "space-between" }}>
