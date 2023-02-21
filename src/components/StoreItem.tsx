@@ -43,9 +43,28 @@ export function StoreItem({
         </CardContent>
       </CardActionArea>
       <CardActions style={{ display: 'flex', justifyContent: 'center' }}>
-        {quantity === 0 ?<Button size="small" color="primary" >
-          + Add to Cart
-        </Button>: null}
+        {quantity === 0 ? (
+          //Buttons too small
+          <Button size="small" color="primary" >
+            + Add to Cart
+          </Button>
+        ) : (
+          <>
+            <Button size="small" color="primary" >
+              -
+            </Button>
+            <Typography
+              variant="body2"
+              color="text.secondary"
+              style={{ margin: '0 10px' }}
+            >
+              {quantity}
+            </Typography>
+            <Button size="small" color="primary" >
+              +
+            </Button>
+          </>
+        )}
       </CardActions>
     </Card>
   );
