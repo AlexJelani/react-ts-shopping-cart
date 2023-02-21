@@ -5,6 +5,8 @@ import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 import { formatCurrency } from "../utilities/formatCurrency";
 
+
+
 type StoreItemProps = {
   id: number;
   name: string;
@@ -21,7 +23,7 @@ export function StoreItem({
   description,
 }: StoreItemProps)
  { 
-  const quantity = 0;
+  const quantity = 1;
   return (
     <Card sx={{ maxWidth: 345, display:"flex", height:"100%", flexDirection: "column"}}>
       <CardActionArea>
@@ -45,23 +47,27 @@ export function StoreItem({
       <CardActions style={{ display: 'flex', justifyContent: 'center' }}>
         {quantity === 0 ? (
           //Buttons too small
-          <Button size="small" color="primary" >
+          <Button size="large" color="primary" >
             + Add to Cart
           </Button>
         ) : (
           <>
             <Button size="small" color="primary" >
+            <Typography variant="h5" gutterBottom>
               -
+              </Typography>
             </Button>
             <Typography
-              variant="body2"
+              variant="body1"
               color="text.secondary"
               style={{ margin: '0 10px' }}
             >
               {quantity}
             </Typography>
             <Button size="small" color="primary" >
+              <Typography variant="h5" gutterBottom>
               +
+              </Typography>
             </Button>
           </>
         )}
