@@ -35,13 +35,14 @@ export function StoreItem({
             <Typography gutterBottom variant="h5" component="div">
               {name}
             </Typography>
-            <Typography variant="body2" color="text.secondary">
-              {description}
+            <Typography variant="h5" color="text.primary">
+              {formatCurrency(price)}
             </Typography>
           </div>
           <div>
             <Typography variant="h5" color="textPrimary">
-              {formatCurrency(price)}
+              {/* //body2 text.secondary */}
+              {/* {formatCurrency(price)} */}
             </Typography>
           </div>
         </CardContent>
