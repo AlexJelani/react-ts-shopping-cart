@@ -4,7 +4,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 import { formatCurrency } from "../utilities/formatCurrency";
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import ShoppingCartRoundedIcon from '@mui/icons-material/ShoppingCartRounded';
 import { blue } from "@mui/material/colors";
 
 
@@ -64,7 +64,7 @@ export function StoreItem({
               color="text.secondary"
               style={{ margin: '0 10px' }}
             >
-              {quantity} in <ShoppingCartIcon sx={{ color: '#1976d2' }}  fontSize="small"/>
+              {quantity} in <ShoppingCartRoundedIcon/>
             </Typography>
             <Button size="small" color="primary" >
               <Typography variant="h5" gutterBottom>
