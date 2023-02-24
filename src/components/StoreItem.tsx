@@ -23,7 +23,7 @@ export function StoreItem({
   imgUrl,
   description,
 }: StoreItemProps) {
-  const quantity = 1;
+  const quantity = 0;
   return (
     <Card
       sx={{
