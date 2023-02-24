@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 import { formatCurrency } from "../utilities/formatCurrency";
 import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
-import { blue } from "@mui/material/colors";
+
 
 type StoreItemProps = {
   id: number;
@@ -65,33 +65,51 @@ export function StoreItem({
           </Button>
         ) : (
           <>
-            <Button size="small" color="error" variant="contained">
-              <Typography variant="h5" gutterBottom>
-                -
-              </Typography>
-            </Button>
-            <Typography
-              variant="body1"
-              color="text.secondary"
-              style={{ margin: "0 10px", fontSize:18 }}
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                flexDirection: "column",
+                gap: ".5rem",
+              }}
             >
-              {quantity} in <ShoppingCartRoundedIcon sx={{color:blue}} />
-            </Typography>
-            <Button size="small" color="success" variant="contained">
-              <Typography variant="h5" gutterBottom>
-                +
-              </Typography>
-            </Button>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: ".5rem",
+                }}
+              >
+                <Button size="small" color="error" variant="contained">
+                  <Typography variant="h5" gutterBottom>
+                    -
+                  </Typography>
+                </Button>
+
+                <Typography
+                  variant="body1"
+                  color="text.secondary"
+                  style={{ margin: "0 10px", fontSize: 18 }}
+                >
+                  {quantity} in{" "}
+                  <ShoppingCartRoundedIcon sx={{ color: "#1e88e5" }} />
+                </Typography>
+                <Button size="small" color="success" variant="contained">
+                  <Typography variant="h5" gutterBottom>
+                    +
+                  </Typography>
+                </Button>
+              </div>
+              <Button size="small" color="error" variant="contained">
+                <Typography variant="h5" gutterBottom>
+                  Remove
+                </Typography>
+              </Button>
+            </div>
           </>
         )}
       </CardActions>
-      <CardActionArea style={{display:"flex", padding:5}}>
-      <Button size="small" color="error" variant="contained">
-              <Typography variant="h5" gutterBottom>
-                Remove
-              </Typography>
-            </Button>
-      </CardActionArea>
     </Card>
   );
 }
