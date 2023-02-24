@@ -73,7 +73,7 @@ export function StoreItem({
             <Typography
               variant="body1"
               color="text.secondary"
-              style={{ margin: "0 10px" }}
+              style={{ margin: "0 10px", fontSize:18 }}
             >
               {quantity} in <ShoppingCartRoundedIcon />
             </Typography>
