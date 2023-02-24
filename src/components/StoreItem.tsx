@@ -7,6 +7,7 @@ import { formatCurrency } from "../utilities/formatCurrency";
 import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
 
 
+
 type StoreItemProps = {
   id: number;
   name: string;
