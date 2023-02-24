@@ -75,7 +75,7 @@ export function StoreItem({
               color="text.secondary"
               style={{ margin: "0 10px", fontSize:18 }}
             >
-              {quantity} in <ShoppingCartRoundedIcon />
+              {quantity} in <ShoppingCartRoundedIcon sx={{color:blue}} />
             </Typography>
             <Button size="small" color="success" variant="contained">
               <Typography variant="h5" gutterBottom>
