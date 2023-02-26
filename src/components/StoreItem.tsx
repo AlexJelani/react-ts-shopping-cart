@@ -5,6 +5,7 @@ import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 import { formatCurrency } from "../utilities/formatCurrency";
 import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
+import { useShoppingCart } from "../context/ShoppingCartContext";
 
 
 
@@ -23,7 +24,8 @@ export function StoreItem({
   imgUrl,
   description,
 }: StoreItemProps) {
-  const quantity = 0;
+  const {getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart} = useShoppingCart()
+  const quantity = getItemQuantity(id);
   return (
     <Card
       sx={{
@@ -61,7 +63,7 @@ export function StoreItem({
       <CardActions style={{ display: "flex", justifyContent: "center" }}>
         {quantity === 0 ? (
           //Buttons too small
-          <Button size="large" color="primary">
+          <Button size="large" color="primary" onClick={()=>increaseCartQuantity(id)}>
             + Add to Cart
           </Button>
         ) : (
@@ -82,7 +84,7 @@ export function StoreItem({
                   gap: ".5rem",
                 }}
               >
-                <Button size="small" color="error" variant="contained">
+                <Button size="small" color="error" variant="contained" onClick={()=>decreaseCartQuantity(id)}>
                   <Typography variant="h5" gutterBottom>
                     -
                   </Typography>
@@ -96,13 +98,13 @@ export function StoreItem({
                   {quantity} in{" "}
                   <ShoppingCartRoundedIcon sx={{ color: "#1e88e5" }} />
                 </Typography>
-                <Button size="small" color="success" variant="contained">
+                <Button size="small" color="success" variant="contained" onClick={()=>increaseCartQuantity(id)}>
                   <Typography variant="h5" gutterBottom>
                     +
                   </Typography>
                 </Button>
               </div>
-              <Button size="small" color="error" variant="contained">
+              <Button size="small" color="error" variant="contained" onClick={()=>removeFromCart(id)}>
                 <Typography variant="h5" gutterBottom>
                   Remove
                 </Typography>
