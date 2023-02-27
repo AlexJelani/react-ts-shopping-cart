@@ -40,7 +40,7 @@ export function Navbar() {
           <Box sx={{ flexGrow: 1 }} />
           <Box>
             <IconButton edge="end" color="inherit" aria-label="menu">
-            <Badge badgeContent={5} color="error" onClick={openCart}>
+            <Badge badgeContent={cartQuantity > 0 ? cartQuantity : null} color="error" onClick={openCart}>
                 <ShoppingCartIcon />
               </Badge>
             </IconButton>
