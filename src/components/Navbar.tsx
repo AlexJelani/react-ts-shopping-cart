@@ -39,8 +39,8 @@ export function Navbar() {
           </Grid>
           <Box sx={{ flexGrow: 1 }} />
           <Box>
-            <IconButton edge="end" color="inherit" aria-label="menu">
-            <Badge badgeContent={cartQuantity > 0 ? cartQuantity : null} color="error" onClick={openCart}>
+            <IconButton edge="end" color="inherit" aria-label="menu" onClick={openCart}>
+            <Badge badgeContent={cartQuantity > 0 ? cartQuantity : null} color="error" >
                 <ShoppingCartIcon />
               </Badge>
             </IconButton>
