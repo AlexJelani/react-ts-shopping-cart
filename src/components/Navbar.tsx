@@ -10,8 +10,10 @@ import {
 } from "@mui/material";
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { Link } from "react-router-dom";
+import { useShoppingCart } from '../context/ShoppingCartContext';
 
 export function Navbar() {
+  const {openCart, cartQuantity} = useShoppingCart()
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -38,7 +40,7 @@ export function Navbar() {
           <Box sx={{ flexGrow: 1 }} />
           <Box>
             <IconButton edge="end" color="inherit" aria-label="menu">
-            <Badge badgeContent={5} color="error">
+            <Badge badgeContent={5} color="error" onClick={openCart}>
                 <ShoppingCartIcon />
               </Badge>
             </IconButton>
