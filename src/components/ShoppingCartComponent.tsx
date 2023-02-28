@@ -1,4 +1,4 @@
-import { IconButton, Typography } from "@mui/material";
+import { IconButton, List, Typography } from "@mui/material";
 import Drawer from "@mui/material/Drawer";
 import { Wrapper } from "../App.styles";
 import { useShoppingCart } from "../context/ShoppingCartContext";
@@ -38,6 +38,9 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
             <CancelIcon  fontSize="large"/>
           </IconButton>
         </div>
+        <List>
+          
+        </List>
       </Drawer>
     </Wrapper>
   );
