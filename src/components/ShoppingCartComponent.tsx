@@ -40,7 +40,7 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
             <CancelIcon  fontSize="large"/>
           </IconButton>
         </div>
-        <List component={Stack}  gap={2} margin={5}>
+        <List component={Stack}  gap={0} >
           {cartItems.map(item =>(
           <CartItem key={item.id} {...item}/>
           ))}
