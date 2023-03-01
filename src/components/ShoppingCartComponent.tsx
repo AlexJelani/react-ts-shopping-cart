@@ -1,4 +1,4 @@
-import { IconButton, List, Typography } from "@mui/material";
+import { IconButton, List, Stack, Typography } from "@mui/material";
 import Drawer from "@mui/material/Drawer";
 import { Wrapper } from "../App.styles";
 import { useShoppingCart } from "../context/ShoppingCartContext";
@@ -6,6 +6,7 @@ import CancelIcon from "@mui/icons-material/Cancel";
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import { flexbox } from "@mui/system";
 import { blue } from "@mui/material/colors";
+import { CartItem } from "./CartItem";
 
 type ShoppingCartProps = {
   isOpen: boolean;
@@ -39,7 +40,7 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
             <CancelIcon  fontSize="large"/>
           </IconButton>
         </div>
-        <List>
+        <List component={Stack}  gap={2} margin={5}>
           {cartItems.map(item =>(
           <CartItem key={item.id} {...item}/>
           ))}

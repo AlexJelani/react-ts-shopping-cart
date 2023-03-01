@@ -1,15 +1,20 @@
- import { useShoppingCart } from "../context/ShoppingCartContext"
- import storeItems from "../data/items.json"
- 
- 
- type CartItemProps = {
-    id:number
-    quantity:number
- }
+import { List, Stack } from "@mui/material";
+import { useShoppingCart } from "../context/ShoppingCartContext";
+import storeItems from "../data/items.json";
 
+type CartItemProps = {
+  id: number;
+  quantity: number;
+};
 
+export function CartItem({ id, quantity }: CartItemProps) {
+  const { removeFromCart } = useShoppingCart();
+  const item = storeItems.find((i) => i.id === id);
+  if (item === null) return null;
 
-export function CartItem({id, quantity}:CartItemProps) {
-    const {removeFromCart} = useShoppingCart()
-    const item = storeItems
+  return (
+    <List component={Stack} direction="row" gap={2}>
+      <img src={item?.imgUrl} style={{ width: "125px", height: "75px" }} />
+    </List>
+  );
 }
