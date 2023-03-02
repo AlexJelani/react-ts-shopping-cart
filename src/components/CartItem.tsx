@@ -1,4 +1,4 @@
-import { List, Stack } from "@mui/material";
+import { Card, CardContent, CardMedia, List, Stack, Typography } from "@mui/material";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import storeItems from "../data/items.json";
 
@@ -13,16 +13,16 @@ export function CartItem({ id, quantity }: CartItemProps) {
   if (item === null) return null;
 
   return (
-    <List component={Stack} direction="row" gap={0}>
-      <img
-        src={item?.imgUrl}
-        style={{
-          width: "125px",
-          height: "75px",
-          padding: "25px",
-          objectFit: "cover",
-        }}
-      />
-    </List>
+      <Card variant="outlined">
+        <CardMedia
+          component="img"
+          image={item?.imgUrl}
+          style={{ width: '125px', height: '75px', objectFit: 'cover' }}
+        />
+        <CardContent>
+          <Typography variant="body2"></Typography>
+        </CardContent>
+      </Card>
+    
   );
 }
