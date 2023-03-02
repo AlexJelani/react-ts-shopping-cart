@@ -13,11 +13,11 @@ export function CartItem({ id, quantity }: CartItemProps) {
   if (item === null) return null;
 
   return (
-      <Card variant="outlined">
+      <Card variant="outlined" sx={{ width:'55%'  }} >
         <CardMedia
           component="img"
           image={item?.imgUrl}
-          style={{ width: '125px', height: '75px', objectFit: 'cover' }}
+          style={{ width: '125px', height: '100%', objectFit: 'cover' }}
         />
         <CardContent>
           <Typography variant="body2"></Typography>
