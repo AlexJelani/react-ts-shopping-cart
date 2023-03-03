@@ -1,4 +1,10 @@
-import { Card, CardContent, CardMedia, List, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  Card,
+  CardContent,
+  CardMedia,
+  Typography,
+} from "@mui/material";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import storeItems from "../data/items.json";
 
@@ -13,17 +19,20 @@ export function CartItem({ id, quantity }: CartItemProps) {
   if (item === null) return null;
 
   return (
-      <Card variant="outlined" sx={{ width:'55%'  }} >
-        <CardMedia
-          component="img"
-          image={item?.imgUrl}
-          style={{ width: '125px', height: '100%', objectFit: 'cover' }}
-        />
-        <CardContent>
-          <Typography variant="body2" component="div">
-          </Typography>
-        </CardContent>
-      </Card>
-    
+    <Card variant="outlined" sx={{ width: "55%" }}>
+    <Box sx={{ display: "flex", alignItems: "center" }}>
+      <CardMedia
+        component="img"
+        image={item?.imgUrl}
+        style={{ width: "125px", height: "100%", objectFit: "cover" }}
+      />
+      <CardContent>
+        <Typography variant="body2" component="div">
+          {item?.name}
+        </Typography>
+      </CardContent>
+      <Box sx={{ flexGrow: 1 }} />
+    </Box>
+  </Card>
   );
 }
