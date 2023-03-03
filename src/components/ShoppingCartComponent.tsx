@@ -1,4 +1,4 @@
-import { IconButton, List, Stack, Typography } from "@mui/material";
+import { Divider, IconButton, List, Stack, Typography } from "@mui/material";
 import Drawer from "@mui/material/Drawer";
 import { Wrapper } from "../App.styles";
 import { useShoppingCart } from "../context/ShoppingCartContext";
@@ -40,7 +40,7 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
             <CancelIcon  fontSize="large"/>
           </IconButton>
         </div>
-        <List component={Stack}  gap={0} >
+        <List component={Stack}  sx={{padding: "25px", gap: "16px"}}>
           {cartItems.map(item =>(
           <CartItem key={item.id} {...item}/>
           ))}

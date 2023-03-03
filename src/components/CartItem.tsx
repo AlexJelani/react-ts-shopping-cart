@@ -20,7 +20,9 @@ export function CartItem({ id, quantity }: CartItemProps) {
           style={{ width: '125px', height: '100%', objectFit: 'cover' }}
         />
         <CardContent>
-          <Typography variant="body2"></Typography>
+          <Typography variant="body2" component="div">
+            Hello
+          </Typography>
         </CardContent>
       </Card>
     
