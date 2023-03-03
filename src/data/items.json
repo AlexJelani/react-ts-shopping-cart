@@ -10,14 +10,14 @@
     "id": 2,
     "name": "Gecko",
     "price": 300,
-    "imgUrl": "/imgs/hoodie.PNG",
+    "imgUrl": "/imgs/lovecoding.PNG",
     "description": "Geckos are lizards belonging to the infraorder Gekkota, found in warm climates throughout the world across all continents."
   },
   {
     "id": 3,
     "name": "Chameleon",
     "price": 300,
-    "imgUrl": "/imgs/hoodietwo.PNG",
+    "imgUrl": "/imgs/jointeam.PNG",
     "description":"Chameleons are a distinctive and highly specialized clade of lizards, found in warm climates throughout the world. "
   }
   ,
@@ -27,5 +27,20 @@
     "price": 300,
     "imgUrl": "/imgs/qualitytshirt.PNG",
     "description":"Chameleons are a distinctive and highly specialized clade of lizards, found in warm climates throughout the world. "
+  },
+  {
+    "id": 5,
+    "name": "Chameleon",
+    "price": 300,
+    "imgUrl": "/imgs/skills.PNG",
+    "description":"Chameleons are a distinctive and highly specialized clade of lizards, found in warm climates throughout the world. "
+  },
+  {
+    "id": 6,
+    "name": "Chameleon",
+    "price": 300,
+    "imgUrl": "/imgs/yourservice.PNG",
+    "description":"Chameleons are a distinctive and highly specialized clade of lizards, found in warm climates throughout the world. "
   }
+
 ]
