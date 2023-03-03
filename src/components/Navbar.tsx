@@ -16,7 +16,7 @@ export function Navbar() {
   const {openCart, cartQuantity} = useShoppingCart()
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="fixed">
         <Toolbar>
           <Grid container spacing={2} alignItems="center">
             <Grid item>
