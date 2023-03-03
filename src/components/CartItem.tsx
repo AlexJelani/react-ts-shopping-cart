@@ -21,7 +21,6 @@ export function CartItem({ id, quantity }: CartItemProps) {
         />
         <CardContent>
           <Typography variant="body2" component="div">
-            Hello
           </Typography>
         </CardContent>
       </Card>
