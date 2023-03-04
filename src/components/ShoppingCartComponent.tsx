@@ -3,10 +3,10 @@ import Drawer from "@mui/material/Drawer";
 import { Wrapper } from "../App.styles";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import CancelIcon from "@mui/icons-material/Cancel";
-import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
-import { flexbox } from "@mui/system";
-import { blue } from "@mui/material/colors";
+import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 import { CartItem } from "./CartItem";
+import { formatCurrency } from "../utilities/formatCurrency";
+import storeItems from "../data/items.json";
 
 type ShoppingCartProps = {
   isOpen: boolean;
@@ -34,16 +34,27 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
           }}
         >
           <Typography variant="h4" m={4}>
-            Your shopping cart <ShoppingBagIcon fontSize="large" sx={{color:'#0d47a1'}}/>
+            Your shopping cart{" "}
+            <ShoppingBagIcon fontSize="large" sx={{ color: "#0d47a1" }} />
           </Typography>
-          <IconButton onClick={closeCart} sx={{color:'#0d47a1'}}>
-            <CancelIcon  fontSize="large"/>
+          <IconButton onClick={closeCart} sx={{ color: "#0d47a1" }}>
+            <CancelIcon fontSize="large" />
           </IconButton>
         </div>
-        <List component={Stack}  sx={{padding: "25px", gap: "16px"}}>
-          {cartItems.map(item =>(
-          <CartItem key={item.id} {...item}/>
+        <List component={Stack} sx={{ padding: "25px", gap: "16px" }}>
+          {cartItems.map((item) => (
+            <CartItem key={item.id} {...item} />
           ))}
+          {/* need to add MaterialUi */}
+          <div>
+          Total{" "}
+            {formatCurrency(
+              cartItems.reduce((total, cartItem) => {
+                const item = storeItems.find(i => i.id === cartItem.id)
+                return total + (item?.price || 0) * cartItem.quantity
+              }, 0)
+            )}
+            </div>
         </List>
       </Drawer>
     </Wrapper>

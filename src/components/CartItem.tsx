@@ -23,7 +23,7 @@ export function CartItem({ id, quantity }: CartItemProps) {
   if (item === null) return null;
 
   return (
-    <Card variant="outlined" sx={{ width: "55%" }}>
+    <Card variant="outlined" sx={{ width: "65%" }}>
       <Box
         sx={{
           display: "flex",
