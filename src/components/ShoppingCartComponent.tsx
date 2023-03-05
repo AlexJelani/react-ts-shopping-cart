@@ -46,15 +46,20 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
             <CartItem key={item.id} {...item} />
           ))}
           {/* need to add MaterialUi */}
-          <div>
-          Total{" "}
+          <Typography
+            variant="h6"
+            align="right"
+            fontWeight="fontWeightBold"
+            fontSize={20}
+          >
+            Total{" "}
             {formatCurrency(
               cartItems.reduce((total, cartItem) => {
-                const item = storeItems.find(i => i.id === cartItem.id)
-                return total + (item?.price || 0) * cartItem.quantity
+                const item = storeItems.find((i) => i.id === cartItem.id);
+                return total + (item?.price || 0) * cartItem.quantity;
               }, 0)
             )}
-            </div>
+          </Typography>
         </List>
       </Drawer>
     </Wrapper>
