@@ -25,7 +25,6 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
         open={isOpen}
         onClose={closeCart}
       >
-        {" "}
         <div
           style={{
             display: "flex",
@@ -41,27 +40,33 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
             <CancelIcon fontSize="large" />
           </IconButton>
         </div>
-        <List component={Stack} sx={{ padding: "25px", gap: "16px" }}>
-          {cartItems.map((item) => (
-            <CartItem key={item.id} {...item} />
-          ))}
-          {/* need to add MaterialUi */}
-          <Typography
-            variant="h6"
-            align="right"
-            fontWeight="fontWeightBold"
-            fontSize={20}
-          >
-            Total{" "}
-            {formatCurrency(
-              cartItems.reduce((total, cartItem) => {
-                const item = storeItems.find((i) => i.id === cartItem.id);
-                return total + (item?.price || 0) * cartItem.quantity;
-              }, 0)
-            )}
+        {cartItems.length > 0 ? (
+          <List component={Stack} sx={{ padding: "25px", gap: "16px" }}>
+            {cartItems.map((item) => (
+              <CartItem key={item.id} {...item} />
+            ))}
+            <Typography
+              variant="h6"
+              align="right"
+              fontWeight="fontWeightBold"
+              fontSize={20}
+            >
+              Total{" "}
+              {formatCurrency(
+                cartItems.reduce((total, cartItem) => {
+                  const item = storeItems.find((i) => i.id === cartItem.id);
+                  return total + (item?.price || 0) * cartItem.quantity;
+                }, 0)
+              )}
+            </Typography>
+          </List>
+        ) : (
+          <Typography variant="h6" align="center">
+            Your shopping cart is empty.
           </Typography>
-        </List>
+        )}
       </Drawer>
     </Wrapper>
   );
 }
+
