@@ -1,4 +1,4 @@
-import { Divider, IconButton, List, Stack, Typography } from "@mui/material";
+import { IconButton, List, Stack, Typography } from "@mui/material";
 import Drawer from "@mui/material/Drawer";
 import { Wrapper } from "../App.styles";
 import { useShoppingCart } from "../context/ShoppingCartContext";
