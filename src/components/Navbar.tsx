@@ -6,14 +6,14 @@ import {
   IconButton,
   Button,
   Grid,
-  Badge
+  Badge,
 } from "@mui/material";
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Link } from "react-router-dom";
-import { useShoppingCart } from '../context/ShoppingCartContext';
+import { useShoppingCart } from "../context/ShoppingCartContext";
 
 export function Navbar() {
-  const {openCart, cartQuantity} = useShoppingCart()
+  const { openCart, cartQuantity } = useShoppingCart();
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="fixed">
@@ -21,9 +21,14 @@ export function Navbar() {
           <Grid container spacing={2} alignItems="center">
             <Grid item>
               <Button component={Link} to="/" color="inherit">
-                <Typography variant="h6" component="div">
-                  Home
-                </Typography>
+                <Box
+                  component="img"
+                  sx={{
+                    height: 60,
+                  }}
+                  alt="Your logo."
+                  src={"/imgs/greatDev.png"}
+                />
               </Button>
             </Grid>
             <Grid item>
@@ -39,8 +44,16 @@ export function Navbar() {
           </Grid>
           <Box sx={{ flexGrow: 1 }} />
           <Box>
-            <IconButton edge="end" color="inherit" aria-label="menu" onClick={openCart}>
-            <Badge badgeContent={cartQuantity > 0 ? cartQuantity : null} color="error" >
+            <IconButton
+              edge="end"
+              color="inherit"
+              aria-label="menu"
+              onClick={openCart}
+            >
+              <Badge
+                badgeContent={cartQuantity > 0 ? cartQuantity : null}
+                color="error"
+              >
                 <ShoppingCartIcon />
               </Badge>
             </IconButton>
