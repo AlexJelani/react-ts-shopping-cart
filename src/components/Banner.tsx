@@ -17,7 +17,7 @@ export default function Banner() {
       <BannerContainer>
         <BannerContent>
           <Typography variant="h6">
-            Huge content
+            Huge content okay
           </Typography>
           <BannerTitle variant="h2">New Bags</BannerTitle>
           <BannerDescription variant="subtitle1">
