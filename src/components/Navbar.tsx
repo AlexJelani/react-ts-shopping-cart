@@ -15,7 +15,7 @@ import { useShoppingCart } from "../context/ShoppingCartContext";
 export function Navbar() {
   const { openCart, cartQuantity } = useShoppingCart();
   return (
-    <AppBar position="sticky">
+    <AppBar position="fixed">
       <Toolbar >
         <Grid container spacing={2} alignItems="center">
           <Grid item>

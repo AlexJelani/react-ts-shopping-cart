@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { Container, Box } from "@mui/material";
+import { Container, Box, Toolbar } from "@mui/material";
 import { Home } from "./pages/Home";
 import { Store } from "./pages/Store";
 import { About } from "./pages/About";
@@ -9,6 +9,7 @@ function App() {
   return (
     <ShoppingCartProvider>
     <Navbar />
+    <Toolbar/>
     <Box mb={4}>
       <Container>
         <Routes>
