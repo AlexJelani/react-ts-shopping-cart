@@ -15,6 +15,7 @@ export default function Banner() {
   return (
     <>
       <BannerContainer>
+        <BannerImage src="/imgs/Tshirtdesign.PNG" />
         <BannerContent>
           <Typography variant="h6">
             Huge content okay
