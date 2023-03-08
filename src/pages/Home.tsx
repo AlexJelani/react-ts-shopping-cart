@@ -1,5 +1,9 @@
-export function Home() {
-    return <h1>Home</h1>
-}
-    
+import Banner from "../components/Banner";
 
+export function Home() {
+  return (
+    <>
+      <Banner />
+    </>
+  );
+}
