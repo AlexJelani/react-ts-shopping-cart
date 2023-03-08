@@ -15,8 +15,7 @@ import { useShoppingCart } from "../context/ShoppingCartContext";
 export function Navbar() {
   const { openCart, cartQuantity } = useShoppingCart();
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="sticky">
         <Toolbar>
           <Grid container spacing={2} alignItems="center">
             <Grid item>
@@ -60,6 +59,5 @@ export function Navbar() {
           </Box>
         </Toolbar>
       </AppBar>
-    </Box>
   );
 }
