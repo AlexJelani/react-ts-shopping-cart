@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+#home{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(public/imgs/anomaly-WWesmHEgXDs-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: luminosity;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#shopBtn {
+    font-family: 'Comfortaa', cursive;
+    color: #eaeaea;
+    background-color: black;
+
+    font-size: 5em;
+    padding: 1em;
+    cursor: pointer;
+    box-shadow: 10px 10px 10px gray;
+}
+ 
