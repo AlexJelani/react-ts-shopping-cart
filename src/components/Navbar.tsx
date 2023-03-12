@@ -14,7 +14,7 @@ import { useShoppingCart } from "../context/ShoppingCartContext";
 export function Navbar() {
   const { openCart, cartQuantity } = useShoppingCart();
   return (
-    <AppBar position="fixed" style={{ backgroundColor: "transparent" }} >
+    <AppBar position="fixed" style={{ backgroundColor: "black" }} >
       <Toolbar >
         <Grid container spacing={2} alignItems="center">
           <Grid item>
@@ -30,12 +30,12 @@ export function Navbar() {
             </Button>
           </Grid>
           <Grid item>
-            <Button component={Link} to="/store" color="inherit">
+            <Button component={Link} to="/store" color="inherit" sx={{ fontSize: "1.2rem", fontWeight: "bold" }}>
               Store
             </Button>
           </Grid>
           <Grid item>
-            <Button component={Link} to="/about" color="inherit">
+            <Button component={Link} to="/about" color="inherit" sx={{ fontSize: "1.2rem", fontWeight: "bold" }}>
               About
             </Button>
           </Grid>

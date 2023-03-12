@@ -1,7 +1,15 @@
+import { Link } from "react-router-dom";
+import '../style/home.scss'
+import {FaGithub, FaLinkedinIn} from 'react-icons/fa'
+
 export function About() {
   return (
     <>
-      <h1>About</h1>
+       <div id="home-two">
+        <Link to={"/store"}>
+          <p id="shopBtn"><FaGithub/><FaLinkedinIn/></p>
+        </Link>
+      </div>
     </>
   );
 }
