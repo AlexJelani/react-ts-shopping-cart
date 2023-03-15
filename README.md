@@ -23,7 +23,7 @@ https://react-ts-shoppingcart.web.app/store
 
 #### Example:   
 
-![](images/CartReact%+%TS.png)
+![](images/cartReactPic.png)
 
 ## Installation and Setup Instructions
 
