@@ -55,7 +55,7 @@ export function CartItem({ id, quantity }: CartItemProps) {
         </Box>
         <Box sx={{ display: "flex", alignItems: "center" }}>
           <Typography variant="h6" component="div" sx={{ mr: 1 }}>
-            {formatCurrency(item?.price * quantity)}
+          {formatCurrency((item?.price ?? 0) * quantity)}
           </Typography>
           <IconButton size="small" color="error" onClick={() => removeFromCart(id)}>
             <DeleteForeverIcon />
