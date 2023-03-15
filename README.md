@@ -15,6 +15,7 @@ https://react-ts-shoppingcart.web.app/store
   - State management using React hooks
   - Dynamic routing
   - Adding products to the shopping cart and displaying the total
+  - Tested with Vitest(Jest)
    - Hosted on Firebase
  
   
