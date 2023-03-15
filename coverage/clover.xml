@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1678771038607" clover="3.2.0">
-  <project timestamp="1678771038607" name="All files">
+<coverage generated="1678843860936" clover="3.2.0">
+  <project timestamp="1678843860937" name="All files">
     <metrics statements="11" coveredstatements="11" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2" elements="16" coveredelements="16" complexity="0" loc="11" ncloc="11" packages="1" files="1" classes="1"/>
     <file name="formatCurrency.ts" path="/home/jalexander/projects/react-ts-shopping-cart/src/utilities/formatCurrency.ts">
       <metrics statements="11" coveredstatements="11" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
