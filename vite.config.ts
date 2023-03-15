@@ -1,7 +1,12 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vitest/config'
+
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()]
-})
+  test: {
+    coverage: {
+      provider: "c8", // You can modify this to use a different provider if needed
+      reporter: ["text", "html"],
+    },
+  },
+});
