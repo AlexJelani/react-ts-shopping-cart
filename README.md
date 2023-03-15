@@ -5,16 +5,17 @@ A responsive e-commerce shopping cart app utilizing custom hooks and local stora
 https://react-ts-shoppingcart.web.app/store
 
 <h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://firebase.google.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="tailwind" width="40" height="40"/> </a> <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer">  </a> </p>
+<p align="left"> <a href="https://firebase.google.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a>  </p>
 
 
 ## Features
 
-  - The user interface was built using Tailwind
-  - The backend has an Express api proxy to fetch the one API data
-  - The app utilizes two APIs, one open source and the other using an API key
-  - The app fetches two APIs to images and information from user input
-  - It utilizes Firebase as the host
+  - The user interface was built using Material UI, React, and TypeScript
+  - A rich component architecture
+  - State management using React hooks
+  - Dynamic routing
+  - Adding products to the shopping cart and displaying the total
+   - Hosted on Firebase
  
   
 ## Project Screen Shot(s)
@@ -47,11 +48,9 @@ To Visit App:
 
 ## Project to-dos
 
-  - 
-  - What did you set out to build?
-  - Why was this project challenging and therefore a really good learning experience?
-  - What were some unexpected obstacles?
-  - What tools did you use to implement this project?
-  
+  -  Call fakestore API
+  - Use React Redux
+
+  The project was fun and challenging I got a chance to use useContext and other React hooks. I also used routing and links to link pages to each other. 
  ## Documentation
  <a href="https://www.google.com/" target="_blank">Google</a>
