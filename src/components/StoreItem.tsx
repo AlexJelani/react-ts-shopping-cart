@@ -27,8 +27,7 @@ export function StoreItem({
   const {getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart} = useShoppingCart()
   const quantity = getItemQuantity(id);
   return (
-    <Card sx={{ maxWidth: 345, display: "flex", height: "100%", flexDirection: "column" }}>
-    <CardActionArea>
+<Card sx={{ maxWidth: 345, display: "flex", height: "100%", flexDirection: "column" ,margin:"auto" }}>    <CardActionArea>
       <CardMedia component="img" height="140" image={imgUrl} alt={name} />
       <CardContent sx={{ display: "flex", justifyContent: "space-between" }}>
         <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", width: "100%" }}>
