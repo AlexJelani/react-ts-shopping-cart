@@ -1,4 +1,4 @@
-import { IconButton, List, Stack, Typography } from "@mui/material";
+import { Box, IconButton, List, Stack, Typography } from "@mui/material";
 import Drawer from "@mui/material/Drawer";
 import { Wrapper } from "../App.styles";
 import { useShoppingCart } from "../context/ShoppingCartContext";
@@ -51,7 +51,9 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
         {cartItems.length > 0 ? (
           <List component={Stack} sx={{ padding: "25px", gap: "16px" }}>
             {cartItems.map((item) => (
+             <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
               <CartItem key={item.id} {...item} />
+              </Box>
             ))}
             <Typography
               variant="h6"
