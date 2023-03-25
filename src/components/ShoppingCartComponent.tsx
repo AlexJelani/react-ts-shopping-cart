@@ -40,8 +40,8 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
             marginRight: 10,
           }}
         >
-          <IconButton onClick={closeCart} sx={{ color: "#0d47a1" }}>
-            <CancelIcon fontSize="large" />
+          <IconButton onClick={closeCart} sx={{ color: "#0d47a1"}} >
+            <CancelIcon fontSize="large" sx={{ margin: "8px" }} />
           </IconButton>
           <Typography variant="h4" m={4}>
             Your shopping cart{" "}
