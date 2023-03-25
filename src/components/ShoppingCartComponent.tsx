@@ -9,7 +9,6 @@ import { formatCurrency } from "../utilities/formatCurrency";
 import storeItems from "../data/items.json";
 import { useMediaQuery } from "@mui/material";
 
-
 type ShoppingCartProps = {
   isOpen: boolean;
 };
@@ -17,17 +16,17 @@ type ShoppingCartProps = {
 export function ShoppingCart({ isOpen }: ShoppingCartProps) {
   const { closeCart, cartItems } = useShoppingCart();
 
-   // Define the breakpoints for different screen sizes
-   const isMobile = useMediaQuery("(max-width: 600px)");
-   const isTablet = useMediaQuery("(max-width: 960px)");
+  // Define the breakpoints for different screen sizes
+  const isMobile = useMediaQuery("(max-width: 600px)");
+  const isTablet = useMediaQuery("(max-width: 960px)");
 
   return (
     <Wrapper>
       <Drawer
-         PaperProps={{
+        PaperProps={{
           sx: {
             width: isMobile ? "100%" : isTablet ? "75%" : "50%", // Set the width based on the screen size
-            maxWidth: 500 // Limit the maximum width to 500px
+            maxWidth: 500, // Limit the maximum width to 500px
           },
         }}
         anchor="right"
@@ -41,13 +40,13 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
             marginRight: 10,
           }}
         >
+          <IconButton onClick={closeCart} sx={{ color: "#0d47a1" }}>
+            <CancelIcon fontSize="large" />
+          </IconButton>
           <Typography variant="h4" m={4}>
             Your shopping cart{" "}
             <ShoppingBagIcon fontSize="large" sx={{ color: "#0d47a1" }} />
           </Typography>
-          <IconButton onClick={closeCart} sx={{ color: "#0d47a1" }}>
-            <CancelIcon fontSize="large" />
-          </IconButton>
         </div>
         {cartItems.length > 0 ? (
           <List component={Stack} sx={{ padding: "25px", gap: "16px" }}>
@@ -78,4 +77,3 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
     </Wrapper>
   );
 }
-
