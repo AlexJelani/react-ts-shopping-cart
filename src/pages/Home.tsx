@@ -1,39 +1,48 @@
-import { Box, Button, Container } from "@mui/material";
 import { Link } from "react-router-dom";
 import backgroundImage from "/imgs/anomaly-WWesmHEgXDs-unsplash.jpg";
+import { Button } from "@mui/material";
+import { makeStyles } from "@material-ui/core/styles";
 
-const styles = {
-  home: {
-    height: "100vh",
-    width: "100%",
-    backgroundImage: `url(${backgroundImage})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-    backgroundBlendMode: "luminosity",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  shopBtn: {
-    fontFamily: "Comfortaa, cursive",
-    color: "#eaeaea",
-    backgroundColor: "black",
-    fontSize: "5em",
-    padding: "1em",
-    cursor: "pointer",
-    boxShadow: "10px 10px 10px gray",
-  },
-};
+//    backgroundImage: `url(${backgroundImage})`,
+
+const useStyles = makeStyles(
+  (theme: {
+    mixins: { toolbar: { minHeight: any } };
+    palette: { primary: { main: any; contrastText: any; dark: any } };
+    shape: { borderRadius: any };
+    shadows: any[];
+  }) => ({
+    root: {
+      minHeight: '100vh',
+      backgroundImage: `url(${backgroundImage})`,
+      backgroundSize: "cover",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+    },
+    button: {
+      backgroundColor: theme.palette.primary.main,
+      color: theme.palette.primary.contrastText,
+      padding: "16px 32px",
+      borderRadius: theme.shape.borderRadius,
+      boxShadow: theme.shadows[5],
+      "&:hover": {
+        backgroundColor: theme.palette.primary.dark,
+      },
+    },
+  })
+);
 
 export function Home() {
+  const classes = useStyles();
+
   return (
-    <Box sx={styles.home}>
-      <Container>
-        <Link to={"/store"}>
-          <Button sx={styles.shopBtn}>Go Shopping</Button>
-        </Link>
-      </Container>
-    </Box>
+    <div className={classes.root}>
+      <Link to={"/store"}>
+        <Button variant="contained" className={classes.button}>
+          Lets go shopping!
+        </Button>{" "}
+      </Link>
+    </div>
   );
 }
