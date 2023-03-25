@@ -23,11 +23,12 @@ const useStyles = makeStyles(
     button: {
       backgroundColor: theme.palette.primary.main,
       color: theme.palette.primary.contrastText,
-      padding: "16px 32px",
+      padding: "40px 80px", /* increased padding */
       borderRadius: theme.shape.borderRadius,
       boxShadow: theme.shadows[5],
+      fontSize: "24px", /* increased font size */
       "&:hover": {
-        backgroundColor: theme.palette.primary.dark,
+        backgroundColor: "yellow",
       },
     },
   })
