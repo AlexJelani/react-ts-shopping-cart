@@ -7,6 +7,8 @@ import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 import { CartItem } from "./CartItem";
 import { formatCurrency } from "../utilities/formatCurrency";
 import storeItems from "../data/items.json";
+import { useMediaQuery } from "@mui/material";
+
 
 type ShoppingCartProps = {
   isOpen: boolean;
@@ -15,11 +17,18 @@ type ShoppingCartProps = {
 export function ShoppingCart({ isOpen }: ShoppingCartProps) {
   const { closeCart, cartItems } = useShoppingCart();
 
+   // Define the breakpoints for different screen sizes
+   const isMobile = useMediaQuery("(max-width: 600px)");
+   const isTablet = useMediaQuery("(max-width: 960px)");
+
   return (
     <Wrapper>
       <Drawer
-        PaperProps={{
-          sx: { width: "50%" },
+         PaperProps={{
+          sx: {
+            width: isMobile ? "100%" : isTablet ? "75%" : "50%", // Set the width based on the screen size
+            maxWidth: 500 // Limit the maximum width to 500px
+          },
         }}
         anchor="right"
         open={isOpen}
