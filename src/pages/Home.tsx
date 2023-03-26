@@ -28,7 +28,7 @@ const useStyles = makeStyles(
       boxShadow: theme.shadows[5],
       fontSize: "24px", /* increased font size */
       "&:hover": {
-        backgroundColor: "black",
+        backgroundColor: "yellow",
       },
     },
   })
