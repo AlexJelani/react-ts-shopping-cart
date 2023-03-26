@@ -32,11 +32,21 @@ const useStyles = makeStyles(
       // fontSize: "24px", /* increased font size */
       "&:hover": {
         backgroundColor: "yellow",
+        color: "black", //new property to change text color on hover
+
       },
     },
-    
+    icon: {
+      fontSize: "40px",
+      marginRight: "10px",
+      color: "white",
+      "&:hover": {
+        color: "black",
+      },
+    },
   })
 );
+
 
 export function About() {
   const classes = useStyles();
@@ -50,7 +60,7 @@ export function About() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaGithub style={{ fontSize: "40px", marginRight: "10px", color: "white" }} />
+            <FaGithub className={classes.icon} /*style={{ fontSize: "40px", marginRight: "10px", color: "white" }}*/ />
           </a>
           </Button>
           <Button variant="contained" className={classes.button}>
@@ -59,7 +69,7 @@ export function About() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaLinkedinIn style={{ fontSize: "40px", marginRight: "10px", color: "white" }} />
+            <FaLinkedinIn className={classes.icon}/*style={{ fontSize: "40px", marginRight: "10px", color: "white" }}*//>
           </a>
         </Button>
       </div>
