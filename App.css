@@ -5,4 +5,7 @@ body {
   }
   
 
-
+  @media (max-width: 600px) {
+    background-position: top center;
+  }
+  

@@ -22,6 +22,11 @@ const useStyles = makeStyles(
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
+      backgroundRepeat: "no-repeat",
+      backgroundAttachment: "fixed",
+      backgroundPosition: "center center",
+      overflow: 'hidden', // prevent scrolling
+
     },
     button: {
       backgroundColor: "black", //updated color
