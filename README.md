@@ -21,7 +21,7 @@ https://react-ts-shoppingcart.web.app/store
   
 ## Project Screen Shot(s)
 
-#### Example:   
+#### Example:   Vite
 
 ![](images/cartreactpic.png)
 
@@ -41,7 +41,7 @@ To Run Test Suite:
 
 To Start Server:
 
-`npm start`  
+`npm run dev`  
 
 To Visit App:
 
