@@ -24,7 +24,7 @@ const useStyles = makeStyles(
       alignItems: "center",
     },
     button: {
-      backgroundColor: theme.palette.primary.main,
+      backgroundColor: "black", //updated color
       color: theme.palette.primary.contrastText,
       padding: "40px 80px", /* increased padding */
       borderRadius: theme.shape.borderRadius,

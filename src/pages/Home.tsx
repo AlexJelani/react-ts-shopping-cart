@@ -21,14 +21,14 @@ const useStyles = makeStyles(
       alignItems: "center",
     },
     button: {
-      backgroundColor: theme.palette.primary.main,
+      backgroundColor: "black", //updated color
       color: theme.palette.primary.contrastText,
       padding: "40px 80px", /* increased padding */
       borderRadius: theme.shape.borderRadius,
       boxShadow: theme.shadows[5],
       fontSize: "24px", /* increased font size */
       "&:hover": {
-        backgroundColor: "yellow",
+        backgroundColor: "black",
       },
     },
   })
