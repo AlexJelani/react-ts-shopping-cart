@@ -24,6 +24,8 @@ const useStyles = makeStyles(
       backgroundRepeat: "no-repeat",
       backgroundAttachment: "fixed",
       backgroundPosition: "center center",
+      position: "fixed",
+      width: "100vw",
     },
     button: {
       overflow: "hidden",

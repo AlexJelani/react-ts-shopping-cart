@@ -26,6 +26,8 @@ const useStyles = makeStyles(
       backgroundAttachment: "fixed",
       backgroundPosition: "center center",
       overflow: 'hidden', // prevent scrolling
+      position: "fixed",
+      width: "100vw",
 
     },
     button: {
