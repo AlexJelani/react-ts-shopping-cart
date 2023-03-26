@@ -29,6 +29,8 @@ const useStyles = makeStyles(
       fontSize: "24px", /* increased font size */
       "&:hover": {
         backgroundColor: "yellow",
+        color: "black", //new property to change text color on hover
+
       },
     },
   })
