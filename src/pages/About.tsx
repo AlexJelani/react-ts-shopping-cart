@@ -37,11 +37,13 @@ const useStyles = makeStyles(() => ({
     fontSize: "40px",
     marginRight: "10px",
     color: "white",
+    verticalAlign: "middle",
     "&:hover": {
       color: "black",
     },
   },
 }));
+
 
 export function About() {
   const classes = useStyles();
