@@ -26,6 +26,7 @@ const useStyles = makeStyles(() => ({
     borderRadius: "4px",
     boxShadow: "0 4px 6px rgba(0, 0, 0, 0.2)",
     fontSize: "24px",
+    cursor: "pointer", // added cursor pointer
     "&:hover": {
       backgroundColor: "yellow",
       color: "black",
