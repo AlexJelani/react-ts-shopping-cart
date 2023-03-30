@@ -19,12 +19,16 @@ export function Navbar() {
         <Grid container spacing={2} alignItems="center">
           <Grid item>
             <Button component={Link} to="/" color="inherit">
-              <Box
+            <Box
                 component="img"
                 sx={{
                   height: 60,
+                  "@media (max-width: 600px)": {
+                    height: 40,
+                    content: "url('/imgs/greatDevmobile.png')",
+                  },
                 }}
-                alt="Your logo."
+                alt="logo."
                 src={"/imgs/greatDev.png"}
               />
             </Button>
